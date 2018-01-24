@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.css">
 </head>
 <body>
+    @include('partials.topbar')
     <div class="row">
+        @include('partials.messages')
         @yield('content')
     </div>
 </body>
