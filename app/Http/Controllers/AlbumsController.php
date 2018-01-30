@@ -9,7 +9,8 @@ class AlbumsController extends Controller
 {
     public function index()
     {
-        return view('albums.index');
+        $albums = Album::with('Photos')->get();
+        return view('albums.index',compact('albums'));
     }
 
     public function create()
@@ -41,5 +42,11 @@ class AlbumsController extends Controller
         $album->save();
 
         return redirect('/albums')->with('success','Album Creado');
+    }
+
+    public function show($id)
+    {
+        $album = Album::find($id);
+        return view('albums.show',compact('album'));
     }
 }
