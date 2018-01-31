@@ -14,24 +14,24 @@
                 @foreach($album->photos as $photo)
                     @if($i == $colcount)
                         <div class="medium-4 columns end">
-                            <a href="/albums/{{ $photo->id }}">
-                                <img src="storage/album_covers/{{ $photo->cover_image }}"
-                                     alt="{{ $photo->name }}"
+                            <a href="/photos/{{ $photo->id }}">
+                                <img src="/storage/photos/{{ $photo->album_id }}/{{ $photo->photo }}"
+                                     alt="{{ $photo->title }}"
                                      class="thumbnail"
                                 >
                             </a>
                             <br/>
-                            <h4>{{ $photo->name }}</h4>
+                            <h4>{{ $photo->title }}</h4>
                             @else
                                 <div class="medium-4 columns">
                                     <a href="/albums/{{ $photo->id }}">
-                                        <img src="storage/album_covers/{{ $photo->cover_image }}"
-                                             alt="{{ $photo->name }}"
+                                        <img src="/storage/photos/{{ $photo->album_id }}/{{ $photo->photo }}"
+                                             alt="{{ $photo->title }}"
                                              class="thumbnail"
                                         >
                                     </a>
                                     <br/>
-                                    <h4>{{ $photo->name }}</h4>
+                                    <h4>{{ $photo->title }}</h4>
                                     @endif
                                     @if($i % 3 == 0)
                                         <div>

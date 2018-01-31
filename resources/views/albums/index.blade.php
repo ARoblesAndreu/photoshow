@@ -11,7 +11,7 @@
                    @if($i == $colcount)
                        <div class="medium-4 columns end">
                            <a href="/albums/{{ $album->id }}">
-                               <img src="storage/album_covers/{{ $album->cover_image }}"
+                               <img src="/storage/album_covers/{{ $album->cover_image }}"
                                     alt="{{ $album->name }}"
                                     class="thumbnail"
                                >
@@ -21,7 +21,7 @@
                    @else
                        <div class="medium-4 columns">
                            <a href="/albums/{{ $album->id }}">
-                               <img src="storage/album_covers/{{ $album->cover_image }}"
+                               <img src="/storage/album_covers/{{ $album->cover_image }}"
                                     alt="{{ $album->name }}"
                                     class="thumbnail"
                                >
